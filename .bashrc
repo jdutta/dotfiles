@@ -24,7 +24,6 @@ alias po='popd'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias cmx='chmod -x *.jpg'
-alias shield='ssh shield.corp.yahoo.com'
 alias fphp='find . -name "*.php" | xargs grep -inr'
 
 # for mac, vi arrow key fix for iTerm
