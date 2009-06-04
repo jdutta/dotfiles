@@ -30,4 +30,5 @@ alias fphp='find . -name "*.php" | xargs grep -inr'
 export TERM=linux
 export PATH=$PATH:~/bin:/opt/local/bin:/usr/local/git/bin
 
+# no more needed maybe
 export CVSROOT=/Users/joy/cvsroot
