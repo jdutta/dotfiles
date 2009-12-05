@@ -28,7 +28,7 @@ alias gd='git diff'
 
 # for mac, vi arrow key fix for iTerm
 export TERM=linux
-export PATH=$PATH:~/bin:/opt/local/bin:/usr/local/git/bin
+export PATH=$PATH:~/bin:/opt/local/bin:/usr/local/git/bin:/Developer/usr/bin
 
 # no more needed maybe
 export CVSROOT=/Users/joy/cvsroot
