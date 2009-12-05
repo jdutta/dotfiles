@@ -6,6 +6,7 @@ set incsearch hlsearch
 set guifont=Monaco:h13 "mac
 colorscheme desert "mac
 set shiftwidth=2
+set bg=dark
 "set expandtab
 
 "maximize the number of tab characters
