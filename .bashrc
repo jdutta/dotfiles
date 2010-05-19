@@ -25,10 +25,12 @@ alias fphp='find . -name "*.php" | xargs grep -inr'
 alias sls='screen -list'
 alias gs='git status'
 alias gd='git diff'
+alias jd='ssh therider@joydutta.com'
+
+alias ad='aescrypt -d -o - '
+alias ae='aescrypt -e '
 
 # for mac, vi arrow key fix for iTerm
 export TERM=linux
 export PATH=$PATH:~/bin:/opt/local/bin:/usr/local/git/bin:/Developer/usr/bin
 
-# no more needed maybe
-export CVSROOT=/Users/joy/cvsroot
