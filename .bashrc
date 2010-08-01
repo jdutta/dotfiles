@@ -23,10 +23,17 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias fphp='find . -name "*.php" | xargs grep -inr'
 alias sls='screen -list'
+
+# git
 alias gs='git status'
 alias gd='git diff'
-alias jd='ssh therider@joydutta.com'
 
+# ssh
+alias jd='ssh therider@joydutta.com'
+alias shield='ssh joyd@shield.corp.yahoo.com'
+alias jdps='ssh joyduttaps@ps28369.dreamhost.com'
+
+# aescrypt
 alias ad='aescrypt -d -o - '
 alias ae='aescrypt -e '
 
