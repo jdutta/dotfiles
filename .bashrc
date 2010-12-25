@@ -30,7 +30,6 @@ alias gd='git diff'
 
 # ssh
 alias jd='ssh therider@joydutta.com'
-alias shield='ssh joyd@shield.corp.yahoo.com'
 alias jdps='ssh joyduttaps@ps28369.dreamhost.com'
 
 # aescrypt
