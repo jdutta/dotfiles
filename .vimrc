@@ -3,11 +3,11 @@
 syntax on
 set ai nu showmatch 
 set incsearch hlsearch
-set guifont=Monaco:h13 "mac
+set guifont=Monaco:h16 "mac
 colorscheme desert "mac
-set shiftwidth=2
+set shiftwidth=4
 set bg=dark
-"set expandtab
+set tabstop=4 expandtab
 
 "maximize the number of tab characters
 "set smarttab
