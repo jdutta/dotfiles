@@ -23,6 +23,9 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias fphp='find . -name "*.php" | xargs grep -inr'
 alias sls='screen -list'
+alias ds='du -khs *'
+alias chgpass='echo "have some aes fun." && ad movies.txt.aes > movies.txt && vim movies.txt && ae movies.txt && rm -f movies.txt'
+alias rsyncd='rsync -avzn --exclude=\.* --exclude=\:* --delete-after ./ `pwd | sed "s/\/Users\/joy\/Pictures\/photography/\/Volumes\/Mac-Backup-1.5TB\/joy\/photography/"`'
 
 # git
 alias gs='git status'
