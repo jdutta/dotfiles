@@ -20,6 +20,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias fphp='find . -name "*.php" | xargs grep -inr'
 alias fjs='find . -name "*.js" | xargs grep -inr'
+alias fhtml='find . -name "*.html" | xargs grep -inr'
 alias sls='screen -list'
 alias ds='du -khs *'
 
