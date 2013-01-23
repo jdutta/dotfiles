@@ -27,6 +27,9 @@ alias ds='du -khs *'
 # git
 alias gs='git status'
 alias gd='git diff'
+alias gpr='git pull --rebase'
+alias gpo='git push origin HEAD:refs/for/master'
+alias glg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
 
 # ssh
 alias jd='ssh therider@joydutta.com'
