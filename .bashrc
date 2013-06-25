@@ -27,6 +27,7 @@ alias ds='du -khs *'
 # git
 alias gs='git status'
 alias gd='git diff'
+alias gb='git branch'
 alias gpr='git pull --rebase'
 alias glg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
 
