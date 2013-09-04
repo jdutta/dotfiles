@@ -1,6 +1,11 @@
 ############ joy: personal settings ##############
 
-PS1="\u@\h \w \$ "
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+PS1='\u@\h \w $(parse_git_branch)$ '
+#PS1="\u@\h \w \$ "
 #PS1="\h \t \w \$ "
 #PS1=$PS1"\[\e]0;\h:\w\a\]"
 
