@@ -31,6 +31,21 @@ alias gb='git branch'
 alias gpr='git pull --rebase'
 alias glg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
 
+#-----------------------------------------------------------------------------------------
+# http://henrik.nyh.se/2008/12/git-dirty-prompt
+# http://www.simplisticcomplexity.com/2008/03/13/show-your-git-branch-name-in-your-prompt/
+#   username@Machine ~/dev/dir[master]$   # clean working directory
+#   username@Machine ~/dev/dir[master*]$  # dirty working directory
+ 
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+function parse_git_branch {
+  #git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1]/"
+}
+#-----------------------------------------------------------------------------------------
+
 # ssh
 alias jd='ssh therider@joydutta.com'
 alias jdps='ssh joyduttaps@ps28369.dreamhost.com'
@@ -43,6 +58,7 @@ alias ae='aescrypt -e '
 export TERM=linux
 export PATH=$PATH:~/bin:/opt/local/bin:/usr/local/git/bin:/Developer/usr/bin
 
+# photo backups
 rsyncd () { 
     rsync -avz $1 --exclude=\.* --exclude=\:* --delete-after ./ `pwd | sed "s/\/Users\/joy\/Pictures\/photography/\/Volumes\/Mac-Backup-1.5TB\/joy\/photography/"`;
 }
