@@ -61,7 +61,7 @@ alias ae='aescrypt -e '
 
 # for mac, vi arrow key fix for iTerm
 export TERM=linux
-export PATH=$PATH:~/bin:/opt/local/bin:/usr/local/git/bin:/Developer/usr/bin
+export PATH=~/bin:/usr/local/bin:/usr/local/git/bin:/Developer/usr/bin:$PATH
 
 # photo backups
 rsyncd () { 
