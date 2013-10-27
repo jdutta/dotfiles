@@ -26,6 +26,7 @@ alias ...='cd ../..'
 alias fphp='find . -name "*.php" | xargs grep -inr'
 alias fjs='find . -name "*.js" | xargs grep -inr'
 alias fhtml='find . -name "*.html" | xargs grep -inr'
+alias fscss='find . -name "*.scss" | xargs grep -inr'
 alias sls='screen -list'
 alias ds='du -khs *'
 
@@ -35,6 +36,10 @@ alias gd='git diff'
 alias gb='git branch'
 alias gpr='git pull --rebase'
 alias glg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
+
+if [ -f ~/.bashrc-aliases-elastica ]; then
+  . ~/.bashrc-aliases-elastica
+fi
 
 #-----------------------------------------------------------------------------------------
 # http://henrik.nyh.se/2008/12/git-dirty-prompt
