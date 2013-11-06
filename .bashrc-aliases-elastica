@@ -1,0 +1,7 @@
+############ joy: aliases for elastica ##############
+
+alias fjs='find . -name "*.js" -not -path "./node_modules/*" -not -path "./3rdparty/*" | xargs grep -inr'
+alias fhtml='find . -name "*.html" -not -path "./node_modules/*" | xargs grep -inr'
+
+# git
+alias gcfd='git checkout feature_discovery'
