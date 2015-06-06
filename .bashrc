@@ -24,18 +24,21 @@ alias po='popd'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias fphp='find . -name "*.php" | xargs grep -inr'
+alias fpy='find . -name "*.py" | xargs grep -inr'
 alias fjs='find . -name "*.js" | xargs grep -inr'
 alias fhtml='find . -name "*.html" | xargs grep -inr'
 alias fscss='find . -name "*.scss" | xargs grep -inr'
 alias sls='screen -list'
 alias ds='du -khs *'
+alias st='/Applications/Sublime\ Text.app/Contents/MacOS/Sublime\ Text'
 
 # git
 alias gs='git status'
 alias gd='git diff'
 alias gb='git branch'
 alias gpr='git pull --rebase'
-alias glg='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
+alias gl='git log --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
+alias glg='gl --graph'
 
 if [ -f ~/.bashrc-aliases-elastica ]; then
   . ~/.bashrc-aliases-elastica
@@ -66,7 +69,7 @@ alias ae='aescrypt -e '
 
 # for mac, vi arrow key fix for iTerm
 export TERM=linux
-export PATH=~/bin:/usr/local/bin:/usr/local/git/bin:/usr/local/opt/ruby/bin:/Developer/usr/bin:$PATH
+export PATH=~/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/Developer/usr/bin:$PATH
 
 # photo backups
 rsyncd () { 
