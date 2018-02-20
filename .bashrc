@@ -25,9 +25,11 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias fphp='find . -name "*.php" | xargs grep -inr'
 alias fpy='find . -name "*.py" | xargs grep -inr'
-alias fjs='find . -name "*.js" | xargs grep -inr'
+#alias fjs='find . -name "*.js" | xargs grep -inr'
+alias fjs='find . -not -path "*node_modules*" -not -path "*dist*" -name "*.js" | xargs grep -inr'
 alias fhtml='find . -name "*.html" | xargs grep -inr'
 alias fscss='find . -name "*.scss" | xargs grep -inr'
+alias fvue='find . -name "*.vue" | xargs grep -inr'
 alias sls='screen -list'
 alias ds='du -khs *'
 alias st='/Applications/Sublime\ Text.app/Contents/MacOS/Sublime\ Text'
@@ -70,6 +72,9 @@ alias ae='aescrypt -e '
 # for mac, vi arrow key fix for iTerm
 export TERM=linux
 export PATH=~/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/Developer/usr/bin:$PATH
+
+export NVM_DIR=~/.nvm
+. /usr/local/opt/nvm/nvm.sh
 
 # photo backups
 rsyncd () { 
