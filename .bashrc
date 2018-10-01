@@ -30,6 +30,7 @@ alias fjs='find . -not -path "*node_modules*" -not -path "*dist*" -name "*.js" |
 alias fhtml='find . -name "*.html" | xargs grep -inr'
 alias fscss='find . -name "*.scss" | xargs grep -inr'
 alias fvue='find . -name "*.vue" | xargs grep -inr'
+alias fjv='find . -not -path "*node_modules*" -not -path "*dist*" -not -path "*images*" -name "*.js" -o -name "*.vue" | xargs grep -inr'
 alias sls='screen -list'
 alias ds='du -khs *'
 alias st='/Applications/Sublime\ Text.app/Contents/MacOS/Sublime\ Text'
