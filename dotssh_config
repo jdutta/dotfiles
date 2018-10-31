@@ -1,0 +1,12 @@
+# This file will be kept as ~/.ssh/config
+# Note: generate key with the email that will be used for the commits
+# Example: ssh-keygen -t rsa -C therider@gmail.com
+
+# Personal
+Host github.com
+    HostName github.com
+    User jdutta
+    IdentityFile ~/.ssh/id_rsa
+
+Host *
+    StrictHostKeyChecking no
