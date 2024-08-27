@@ -29,6 +29,7 @@ alias fscss='find . -name "*.scss" | xargs grep -inr'
 alias fvue='find . -name "*.vue" | xargs grep -inr'
 alias fjs='find . -not -path "*node_modules*" -not -path "*dist*" -not -path "*images*" -name "*.js" | xargs grep -inr'
 alias fjv='find . -not -path "*node_modules*" -not -path "*dist*" -not -path "*images*" -name "*.js" -o -name "*.vue" | xargs grep -inr'
+alias fjsx='find . -name "*.jsx" -o -name "*.tsx" | xargs grep -inr'
 alias checklocalprod='(cd dist && python -m SimpleHTTPServer)'
 alias tnrb='time npm run build'
 alias sls='screen -list'
@@ -44,10 +45,6 @@ alias gpr='git pull --rebase'
 alias gl='git log --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
 alias glg='gl --graph'
 alias gfgcm='git fetch && git checkout master && gpr && git remote prune origin'
-
-if [ -f ~/.bashrc-aliases-elastica ]; then
-  . ~/.bashrc-aliases-elastica
-fi
 
 #-----------------------------------------------------------------------------------------
 # http://henrik.nyh.se/2008/12/git-dirty-prompt
@@ -66,8 +63,14 @@ function parse_git_branch {
 
 # for mac, vi arrow key fix for iTerm
 export TERM=linux
-export PATH=~/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/Developer/usr/bin:$PATH
+export PATH=~/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/Developer/usr/bin:/opt/homebrew/bin:$PATH
+
+# TODO put in a separate bashrc-zaimler file
+export PATH=$PATH:~/.sdkman/candidates/gradle/current/bin
+source ~/.sdkman/bin/sdkman-init.sh
+alias python='python3'
 
 # for nvm
-export NVM_DIR=~/.nvm
-. /usr/local/opt/nvm/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
